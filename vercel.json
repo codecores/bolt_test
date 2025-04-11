@@ -1,19 +1,18 @@
 {
     "build": {
-      "env": {
-        "NODE_ENV": "production"
-      }
+        "env": {
+            "NODE_ENV": "production"
+        }
     },
     "functions": {
-      "api/**/*.ts": {
-        "runtime": "edge"
-      }
+        "api/index.ts": {
+            "runtime": "vercel-edge@2"
+        }
     },
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "api/index.ts"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "api/index.ts"
+        }
     ]
-  }
-  
+}
